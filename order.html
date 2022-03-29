@@ -1,0 +1,883 @@
+<html>
+
+<head>
+	
+	<title>Order Form</title>
+	<link rel="icon" type="image/gif/png" href="https://cdn-icons-png.flaticon.com/512/4645/4645898.png">
+
+<!-- Bootstrap 5 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<!-- JQuery -->
+	   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"        crossorigin="anonymous"></script>
+	
+<!-- CSS -->
+	<link rel="stylesheet" href="css/order.css">	
+	
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&family=M+PLUS+Rounded+1c&family=Playfair+Display&display=swap" rel="stylesheet">
+	
+<!-- Icons -->	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<!-- JavaScript -->	
+	<script src="javascript/menu.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<!-- Animate on Scroll -->
+ <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+</head>
+
+<body>
+
+<header>
+<a class="bi bi-bag bag " href="order.html"></a>
+<a href="index.html" class ="logo-navbar"><img src="images/logo.png"></a>
+<a class="bi bi-list menu"   onclick="openNav()"></a>
+
+	<div id="myNav" class="menu-overlay">
+	  <a href="javascript:void(0)" class="closebtn bi bi-x" onclick="closeNav()"></i></a>
+	  <div class="menu-overlay-content">
+		<a href="index.html" class="menu-item"><span class="un">Home</span></a>
+		<a href="services.html" class="menu-item"><span class="un">Services</span></a>
+		<a href="menu.html" class="menu-item"><span class="un">Menu</span></a>
+		<a href="order.html" class="menu-item"><span class="un">Order</span></a>
+		<a href="about.html" class="menu-item"><span class="un">About</span></a>
+		<a href="contact.html" class="menu-item"><span class="un">Contact</span></a>
+	  </div>
+	</div>
+
+</header>
+
+<section class="banner">
+<div class="title">
+<h1 class = "title-text align-middle" data-aos="fade-down">SERVICES</h1>
+</div>
+</section>
+
+
+
+<div class="container mx-auto my-4 justify-content-center">
+		<div class="card">
+		  <div class="card-header">
+			<h5><b>Services</b></h5>
+		  </div>
+		  <div class="card-body">
+			<form>
+				<div class="row">
+				<div class="col-md">
+					<label for="Qty1" class="col-md-6 col-form-label"><b>Paper Types</b></label>
+						<div class="mx-4">
+							<div class="form-group row mt-4">
+								<label for="Qty1" class="col-md-6 col-form-label">Glossy Paper </label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal()"  name="qty" id="glossy" placeholder="Quantity">
+								</div>
+								<label for="Qty1" class="col-md-6 col-form-label">Select Ink Type for Glossy Paper </label>
+							</div>
+							<div class="mx-4 my-2">
+								<div class="form-check form-check-inline mx-4">
+								  <input class="form-check-input" type="radio" name="radio1" value="20" id="hp">
+								  <label class="form-check-label" for="flexRadioDefault1">Hewlett Packard </label>
+								</div>
+								<div class="form-check form-check-inline mx-4">					
+								  <input class="form-check-input" type="radio" name="radio1" value="15" id="canon">
+								  <label class="form-check-label" for="flexRadioDefault2">Canon </label>
+								</div>
+								<div class="form-check form-check-inline mx-4">	
+								  <input class="form-check-input" type="radio" name="radio1" value="30" id="epson">
+								  <label class="form-check-label" for="flexRadioDefault3">Epson </label>
+								</div>
+							</div>
+							<div class="form-group row mt-4">
+								<label for="Qty1" class="col-md-6 col-form-label">Matte Paper </label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal()"  name="qty" id="matte" placeholder="Quantity">
+								</div>
+								<label for="Qty1" class="col-md-6 col-form-label">Select Ink Type for Matte Paper </label>
+							</div>
+							<div class="mx-4 my-2">
+								<div class="form-check form-check-inline mx-4">
+								  <input class="form-check-input" type="radio" name="radio2" id="flexRadioDefault4">
+								  <label class="form-check-label" for="flexRadioDefault4">Hewlett Packard </label>
+								</div>
+								<div class="form-check form-check-inline mx-4">					
+								  <input class="form-check-input" type="radio" name="radio2" id="flexRadioDefault5">
+								  <label class="form-check-label" for="flexRadioDefault5">Canon </label>
+								</div>
+								<div class="form-check form-check-inline mx-4">	
+								  <input class="form-check-input" type="radio" name="radio2" id="flexRadioDefault6">
+								  <label class="form-check-label" for="flexRadioDefault6">Epson </label>
+								</div>
+							</div>
+							<div class="form-group row mt-4">
+								<label for="Qty1" class="col-md-6 col-form-label">Textured Paper </label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal()"  name="qty" id="textured" placeholder="Quantity">
+								</div>
+								<label for="Qty1" class="col-md-6 col-form-label">Select Ink Type for Textured Paper </label>
+							</div>
+							<div class="mx-4 my-2">
+								<div class="form-check form-check-inline mx-4">
+								  <input class="form-check-input" type="radio" name="radio3" id="flexRadioDefault7">
+								  <label class="form-check-label" for="flexRadioDefault7">Hewlett Packard </label>
+								</div>
+								<div class="form-check form-check-inline mx-4">					
+								  <input class="form-check-input" type="radio" name="radio3" id="flexRadioDefault8">
+								  <label class="form-check-label" for="flexRadioDefault8">Canon </label>
+								</div>
+								<div class="form-check form-check-inline mx-4">	
+								  <input class="form-check-input" type="radio" name="radio3" id="flexRadioDefault9">
+								  <label class="form-check-label" for="flexRadioDefault9">Epson </label>
+								</div>
+							</div>
+						</div>
+					<label for="Qty1" class="col-md-6 col-form-label"><b>Binding</b></label>
+						<div class="form-group row mx-4  my-2">
+								<label  class="col-md-6 col-form-label">Heated Spine</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal()"  name="qty" id="heated" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4 my-2">
+								<label  class="col-md-6 col-form-label">Saddle Spine</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal()"  name="qty" id="saddle" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4  my-2">
+								<label  class="col-md-6 col-form-label">Wire</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal()"  name="qty" id="wire" placeholder="Quantity">
+								</div>		
+						</div>
+					</div>
+					<div class="col-md">
+					<label for="Qty1" class="col-md-6 col-form-label"><b>Laminating</b></label>
+					
+							<div class="form-group row mx-4  my-2">
+								<label for="Qty1" class="col-md-6 col-form-label">A4 Paper - 8.3 x 11.7 inches</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal()"  name="qty" id="a4" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4 my-2">
+								<label for="Qty1" class="col-md-6 col-form-label">Signage -  5.2 x 7.2 inches</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal()"  name="qty" id="signage" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4  my-2">
+								<label for="Qty1" class="col-md-6 col-form-label">Cards -  2.48 x 4.21 inches</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal()"  name="qty" id="cards" placeholder="Quantity">
+								</div>		
+						</div>
+						
+					<label for="Qty1" class="col-md-6 col-form-label"><b>Cutting</b></label>
+						<div class="form-group row mx-4  my-2">
+								<label class="col-md-6 col-form-label">5 Copies</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal()"  name="qty" id="five" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4 my-2">
+								<label  class="col-md-6 col-form-label">10 Copies</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal()"  name="qty" id="ten" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4  my-2">
+								<label class="col-md-6 col-form-label">20 Copies</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal()"  name="qty" id="twenty" placeholder="Quantity">
+								</div>		
+						</div>
+						
+						<label for="Qty1" class="col-md-6 col-form-label"><b>Total</b></label>
+						<div class="form-group row mx-4  my-2">
+								<label for="total" class="col-md-6 col-form-label">Quantity</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" id="total" readonly>
+								</div>		
+						</div>
+						<div class="form-group row mx-4 my-2">
+								<label for="totalbill" class="col-md-6 col-form-label">Bill</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center"  id="totalbill" readonly>
+								</div>		
+						</div>
+					</div>
+			</form>
+		 </div>
+	</div>
+</div>
+</div>
+
+<!-- menu -->
+<div class="container mx-auto my-4 justify-content-center">
+	<div class="card">
+		<div class="card-header">
+			<h5><b>Menu</b></h5>
+		</div>
+		<div class="card-body">
+		<form>
+			<div class="row">
+				<div class="col-md">
+					<label for="Qty1" class="col-md-6 col-form-label"><b>Sandwiches</b></label>
+					
+						<div class="form-group row mx-4  my-3">
+								<label for="Qty1" class="col-md-6 col-form-label">Mr.Egg</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="sand1" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4 my-3">
+								<label for="Qty1" class="col-md-6 col-form-label">Bacon Double Cheese</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="sand2" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4  my-3">
+								<label for="Qty1" class="col-md-6 col-form-label">Teriyaki BBQ</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="sand3" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4  my-3">
+								<label for="Qty1" class="col-md-6 col-form-label">Garlic Bacon Cheese</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="sand4" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4 my-3">
+								<label for="Qty1" class="col-md-6 col-form-label">Ham & Cheese French Toast</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="sand5" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4  my-3">
+								<label for="Qty1" class="col-md-6 col-form-label">Avo Holic</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="sand6" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4  my-3">
+								<label for="Qty1" class="col-md-6 col-form-label">Bacon Deep Cheese Bun</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="sand7" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4  my-3">
+								<label for="Qty1" class="col-md-6 col-form-label">American Ham Cheese</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="sand8" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4  my-3">
+								<label for="Qty1" class="col-md-6 col-form-label">Club Chicken Sandwich</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="sand9" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4  my-3">
+								<label for="Qty1" class="col-md-6 col-form-label">Club Sandwich</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="sand10" placeholder="Quantity">
+								</div>		
+						</div>
+					</div>
+					<div class="col-md">
+					<label for="Qty1" class="col-md-6 col-form-label"><b>Cold Drinks</b></label>
+					
+						<div class="form-group row mx-4  my-2">
+								<label for="Qty1" class="col-md-6 col-form-label">Brown Sugar Tea</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="cold1" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4 my-2">
+								<label for="Qty1" class="col-md-6 col-form-label">Iced Latte</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="cold2" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4  my-2">
+								<label for="Qty1" class="col-md-6 col-form-label">Iced Caramel Macchiato</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="cold3" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4  my-2">
+								<label for="Qty1" class="col-md-6 col-form-label">Tropical Fruit Iced Tea</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="cold4" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4 my-2">
+								<label for="Qty1" class="col-md-6 col-form-label">Sweet Cream Cold</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="cold5" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4  my-2">
+								<label for="Qty1" class="col-md-6 col-form-label">Red Infused Iced Tea</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="cold6" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4  my-2">
+								<label for="Qty1" class="col-md-6 col-form-label">Boba Milktea</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="cold7" placeholder="Quantity">
+								</div>		
+						</div>
+					<label for="Qty1" class="col-md-6 col-form-label"><b>Warm Drinks</b></label>
+						<div class="form-group row mx-4  my-2">
+								<label for="Qty1" class="col-md-6 col-form-label">Jasmine Tea</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="warm1" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4 my-2">
+								<label for="Qty1" class="col-md-6 col-form-label">Charmomille Tea</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="warm2" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4  my-2">
+								<label for="Qty1" class="col-md-6 col-form-label">Matcha Green Latté</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="warm3" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4 my-2">
+								<label for="Qty1" class="col-md-6 col-form-label">Café Latté</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="warm4" placeholder="Quantity">
+								</div>		
+						</div>
+						<div class="form-group row mx-4  my-2">
+								<label for="Qty1" class="col-md-6 col-form-label">Mocha Latté</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" onblur="findTotal2()"  name="qty2" id="warm5" placeholder="Quantity">
+								</div>		
+						</div>
+						<label for="Qty1" class="col-md-6 col-form-label"><b>Total</b></label>
+						<div class="form-group row mx-4  my-2">
+								<label for="total" class="col-md-6 col-form-label">Quantity</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center" id="total2" readonly>
+								</div>		
+						</div>
+						<div class="form-group row mx-4 my-2">
+								<label  class="col-md-6 col-form-label">Bill</label>
+								<div class="col-md-4">
+								<input type="number" class="form-control text-center"  id="totalbill2" readonly>
+								</div>		
+						</div>
+			
+					</div>
+					
+			</div>
+		</form>
+		</div>
+	</div>
+</div>
+
+<div class="container mx-auto my-4 justify-content-center">
+<div class="row">
+  <div class="col-md">
+<div class="card mx-auto">
+  <div class="card-header">
+    <h3 class="text-center">Order Information</h3>
+  </div>
+  <div class="card-body m-2">
+    <form >
+	  <div class="form-group row justify-content-center my-3">
+		<div class="form-group row mx-4  my-2">
+			<label for="total" class="col-md-6 col-form-label">Services Bill</label>
+			<div class="col-md-4">
+				<input type="number" class="form-control text-center" id="servicetotal" readonly>
+			</div>		
+		</div>
+		<div class="form-group row mx-4 my-2">
+			<label for="totalbill" class="col-md-6 col-form-label">Menu Bill</label>
+			<div class="col-md-4">
+				<input type="number" class="form-control text-center"  id="menutotal" readonly>
+			</div>		
+		</div>
+		<div class="form-group row mx-4 my-2">
+			<label for="totalbill" class="col-md-6 col-form-label">Total Bill</label>
+			<div class="col-md-4">
+				<input type="number" class="form-control text-center"  id="grandtotal" readonly>
+			</div>		
+		</div>
+		<div class="form-group row mx-4 my-2">
+			<label  class="col-md-6 col-form-label">Payment</label>
+			<div class="col-md-4">
+			<input type="number" class="form-control text-center"  id="payment" >
+		</div>		
+		</div>
+	  </div>
+	</form>
+  </div>
+</div>
+  </div>
+
+
+<div class="col-md">
+<div class="card mx-auto">
+  <div class="card-header">
+    <h3 class="text-center">Customer Information</h3>
+  </div>
+  <div class="card-body m-2">
+  
+    <form>
+	  <div class="form-group row justify-content-center my-3">
+		<div class="form-group row mx-4  my-2">
+			<label for="total" class="col-md-6 col-form-label">Full </label>
+			<div class="col-md-4">
+				<input type="number" class="form-control text-center" id="name" placeholder="F.N M.I. L.N">
+			</div>		
+		</div>
+		<div class="form-group row mx-4 my-2">
+			<label for="totalbill" class="col-md-6 col-form-label">Address</label>
+			<div class="col-md-4">
+				<input type="number" class="form-control text-center"  id="address" placeholder="Address">
+			</div>		
+		</div>
+		<div class="form-group row mx-4 my-2">
+			<label for="totalbill" class="col-md-6 col-form-label">Total Bill</label>
+			<div class="col-md-4">
+				<input type="number" class="form-control text-center" id="contact" placeholder="09** *** ****">
+			</div>		
+		</div>
+		<div class="form-group row mx-4 my-2">
+			<label  class="col-md-6 col-form-label">Contact Number</label>
+			<div class="col-md-4">
+			<input type="number" class="form-control text-center"  id="payment" >
+			</div>		
+		</div>
+		<div class="text-center">
+			<a class="btn btn-outline-primary submit my-2" data-bs-toggle="modal" data-bs-target="#exampleModal"  id="submit">Submit</a> 
+		</div>
+	  </div>
+	</form>
+  </div>
+</div>
+  </div>
+
+</div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sales Invoice</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+           <h6 id="modal_body"></h6>
+		   <div class="text-center">
+				<a class="btn btn-outline-primary submit my-2" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Confirm</a> 
+			</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel2 text-center">Order Successful!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+       The order details has been sent on your number. Thank you.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="parallax "></div>
+<footer class="">
+
+    <div class="row d-flex" >
+      <div class="col-md-3">
+		<img src="images/logo-footer.png" class="logo-footer">
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2">Cozy nook where you can sit, relax, and wait for your printing job to be finished.</li>
+		  <li class="nav-item mb-2">For educational purpose only.</li>
+		</ul>
+      </div>
+
+      <div class="col-md-3 links">
+        <h5>Links</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="menu.html" class="nav-link p-0 text-muted">Menu</a></li>
+          <li class="nav-item mb-2"><a href="order.html" class="nav-link p-0 text-muted">Order</a></li>
+          <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-muted">About</a></li>
+          <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-muted">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Services</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="services.html#printing" class="nav-link p-0 text-muted">Digital Printing</a></li>
+          <li class="nav-item mb-2"><a href="services.html#binding" class="nav-link p-0 text-muted">Binding</a></li>
+          <li class="nav-item mb-2"><a href="services.html#laminating" class="nav-link p-0 text-muted">Laminating</a></li>
+		  <li class="nav-item mb-2"><a href="services.html#cutting" class="nav-link p-0 text-muted">Cutting</a></li>
+		</ul>
+      </div>
+
+      <div class="col-md-3">
+        <form>
+          <h5>Subscribe to our newsletter</h5>
+          <p>Monthly digest of whats new and exciting from us.</p>
+          <div class="d-flex w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn " type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-c">
+      Copyright © 2022 All Rights Reserved by <b>Vitaly Tea</b> ∙ Sandwiches by  <b>Eggdrop.kr</b> ∙ Beverages by <b>Coco-tea.ph</b> ∙ Background images by <b>Architonic</b> 
+    </div>
+  </footer>
+
+
+<script>
+//printing
+var glossy = 30, matte = 20, textured = 20; // price
+var glossy_q = 0; matte_q = 0; textured_q = 0; // quantity
+var glossy_t = 0; matte_t = 0; textured_t = 0; // total
+
+
+//binding
+var saddle = 60, heated = 80, wire = 40; // price
+var saddle_q = 0; heated_q = 0; wire_q = 0; // quantity
+var saddle_t = 0; heated_t = 0; wire_t = 0; // total
+
+//laminating
+var a4 = 50, signage = 30, cards = 20;// price
+var a4_q = 0, signage_q = 0, cards_q = 0;// quantity
+var a4_t = 0, signage_t = 0, cards_t = 0;// total
+
+//cutting
+var five = 15, ten = 30, twenty = 50;// price
+var five_q = 0, ten_q = 0, twenty_q = 0;// quantity
+var five_t = 0, ten_t = 0, twenty_t = 0;// total
+
+// sandwich
+var sand1 = 99, sand2 = 120, sand3 = 129, sand4 = 149, sand5 = 129, sand6 = 139, sand7 = 149, sand8 = 149, sand9 = 169, sand10 = 159; // price
+var sand1_q = 0, sand2_q = 0, sand3_q = 0, sand4_q = 0, sand5_q = 0, sand6_q = 0, sand7_q = 0, sand8_q = 0, sand9_q = 0, sand10_q = 0;// quantity
+var sand1_t = 0, sand2_t = 0, sand3_t = 0, sand4_t = 0, sand5_t = 0, sand6_t = 0, sand7_t = 0, sand8_t = 0, sand9_t = 0, sand10_t = 0;// total
+
+//warm
+var warm1= 100, warm2= 100,  warm3= 110,   warm4= 150,   warm5= 160; // price
+var warm1_q = 0, warm2_q = 0, warm3_q = 0, warm4_q = 0, warm5_q = 0; // quantity
+var warm1_t = 0, warm2_t = 0, warm3_t = 0, warm4_t = 0, warm5_t = 0;// total
+
+//cold
+var cold1= 140, cold2= 135,  cold3= 135,   cold4= 150,  cold5= 135, cold6= 110, cold7= 135;// price
+var cold1_q= 0, cold2_q= 0,  cold3_q= 0,  cold4_q= 0,  cold5_q = 0, cold6_q = 0, cold7_q = 0;// quantity
+var cold1_t= 0, cold2_t= 0,  cold3_t= 0,  cold4_t= 0,  cold5_t = 0, cold6_t = 0, cold7_t = 0;// quantity
+
+
+
+
+
+document.getElementById("sand1").addEventListener("change",function(){
+	sand1_q=this.value;
+	sand1_t=sand1_q*sand1;
+    Total2();
+
+});
+
+document.getElementById("sand2").addEventListener("change",function(){
+	sand2_q=this.value;
+	sand2_t=sand2_q*sand2;
+    Total2();
+
+});
+
+document.getElementById("sand3").addEventListener("change",function(){
+	sand3_q=this.value;
+	sand3_t=sand3_q*sand3;
+    Total2();
+
+});
+
+document.getElementById("sand4").addEventListener("change",function(){
+	sand4_q=this.value;
+	sand4_t=sand4_q*sand4;
+    Total2();
+
+});
+
+document.getElementById("sand5").addEventListener("change",function(){
+	sand5_q=this.value;
+	sand5_t=sand5_q*sand5;
+    Total2();
+
+});
+
+document.getElementById("sand6").addEventListener("change",function(){
+	sand6_q=this.value;
+	sand6_t=sand6_q*sand6;
+    Total2();
+
+});
+
+document.getElementById("sand7").addEventListener("change",function(){
+	sand7_q=this.value;
+	sand7_t=sand7_q*sand7;
+    Total2();
+
+});
+
+document.getElementById("sand8").addEventListener("change",function(){
+	sand8_q=this.value;
+	sand8_t=sand8_q*sand8;
+    Total2();
+
+});
+
+document.getElementById("sand9").addEventListener("change",function(){
+	sand9_q=this.value;
+	sand9_t=sand9_q*sand9;
+    Total2();
+
+});
+
+document.getElementById("sand10").addEventListener("change",function(){
+	sand10_q=this.value;
+	sand10_t=sand10_q*sand10;
+    Total2();
+
+});
+
+document.getElementById("cold1").addEventListener("change",function(){
+    cold1_q=this.value;
+  cold1_t=cold1_q*cold1;
+    Total2();
+
+});
+
+document.getElementById("cold2").addEventListener("change",function(){
+    cold2_q=this.value;
+  cold2_t=cold2_q*cold2;
+    Total2();
+
+});
+
+document.getElementById("cold3").addEventListener("change",function(){
+    cold3q=this.value;
+  cold3t=cold3_q*cold3;
+    Total2();
+
+});
+
+document.getElementById("cold4").addEventListener("change",function(){
+    cold4_q=this.value;
+  cold4_t=cold4_q*cold4;
+    Total2();
+
+});
+
+document.getElementById("cold5").addEventListener("change",function(){
+    cold5_q=this.value;
+  cold5_t=cold5_q*cold5;
+    Total2();
+
+});
+
+document.getElementById("cold6").addEventListener("change",function(){
+    cold6_q=this.value;
+  cold6_t=cold6_q*cold6;
+    Total2();
+
+});
+
+document.getElementById("cold7").addEventListener("change",function(){
+    cold7_q=this.value;
+  cold7_t=cold7_q*cold7;
+    Total2();
+
+});
+
+document.getElementById("warm1").addEventListener("change",function(){
+    warm1_q=this.value;
+	warm1_t=warm1_q*warm1;
+    Total2();
+
+});
+
+document.getElementById("warm2").addEventListener("change",function(){
+    warm2_q=this.value;
+	warm2_t=warm2_q*warm2;
+    Total2();
+
+});
+
+document.getElementById("warm3").addEventListener("change",function(){
+    warm3_q=this.value;
+	warm3_t=warm3_q*warm3;
+    Total2();
+
+});
+
+document.getElementById("warm4").addEventListener("change",function(){
+    warm4_q=this.value;
+	warm4_t=warm4_q*warm4;
+    Total2();
+
+});
+
+document.getElementById("warm5").addEventListener("change",function(){
+    warm5_q=this.value;
+	warm5_t=warm5_q*warm5;
+    Total2();
+
+});
+
+document.getElementById("glossy").addEventListener("change",function(){
+	glossy_q=this.value;
+	glossy_t=glossy_q*glossy;
+    Total();
+
+});
+
+document.getElementById("matte").addEventListener("change",function(){
+	matte_q=this.value;
+	matte_t=matte_q*matte;
+    Total();
+
+});
+
+document.getElementById("textured").addEventListener("change",function(){
+	textured_q=this.value;
+	textured_t=textured_q*textured;
+    Total();
+
+});
+
+
+
+document.getElementById("saddle").addEventListener("change",function(){
+    saddle_q=this.value;
+	saddle_t=saddle_q*saddle;
+    Total();
+
+});
+
+document.getElementById("heated").addEventListener("change",function(){
+    heated_q=this.value;
+	heated_t=heated_q*heated;
+    Total();
+
+});
+
+document.getElementById("wire").addEventListener("change",function(){
+    wire_q=this.value;
+	wire_t=wire_q*wire;
+    Total();
+
+});
+
+document.getElementById("a4").addEventListener("change",function(){
+    a4_q=this.value;
+	a4_t=a4_q*a4;
+    Total();
+
+});
+
+document.getElementById("signage").addEventListener("change",function(){
+    signage_q=this.value;
+	signage_t=signage_q*signage;
+    Total();
+
+});
+
+document.getElementById("cards").addEventListener("change",function(){
+    cards_q=this.value;
+	cards_t=cards_q*cards;
+    Total();
+
+});
+
+document.getElementById("five").addEventListener("change",function(){
+    five_q=this.value;
+	five_t=five_q*five;
+    Total();
+
+});
+
+document.getElementById("ten").addEventListener("change",function(){
+    ten_q=this.value;
+	ten_t=ten_q*ten;
+    Total();
+
+});
+
+document.getElementById("twenty").addEventListener("change",function(){
+    twenty_q=this.value;
+	twenty_t=twenty_q*twenty;
+    Total();
+
+});
+
+
+$("#submit").click(function () {
+
+
+    var name = $("#name").val();
+    var address = $("#address").val();
+    var contact = $("#contact").val();
+    var bill = $("#grandtotal").val();
+	var payment = $("#payment").val();
+	var change = payment - bill;
+	if (change < 0) {change = "Money is insufficient."}
+
+   var str = 
+   "Name: " + name + " <br/> " + 
+   "Address: " + address + " <br/> " +
+   "Contact Number: " + contact + " <br/> " +
+   "Total Bill: " + grandtotal+ " <br/> " +
+   "Payment: " + payment + " <br/> " +
+   "Change: " + change;
+   $("#modal_body").html(str);
+});
+
+
+</script>
+
+<script>
+		AOS.init({
+			offset: 180,
+			duration: 800
+		});
+	</script>
+
+</body>
+
+
+</html>
+
+				
