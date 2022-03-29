@@ -1,0 +1,439 @@
+body
+{
+	background: white;
+	min-height: 200vh;
+	font-family: 'Comfortaa';
+	color: black;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	Left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.6s;
+	padding: 30px 100px;
+	z-index: 100000;
+}
+
+header.sticky {
+	padding: 4px 100px;
+	background: #e2a363; /*#C19F7AFF;*/
+}
+
+header.sticky .logo-navbar img {
+	filter: brightness(0) invert(1);
+	height: 4em;
+}
+
+header.sticky .bi-list, header.sticky .bi-bag {
+	color: white;
+	font-size: 1.6em;
+	text-shadow: none;
+}
+
+header .logo-navbar img {
+	position: relative;
+	height: 5.2em;
+	text-decoration: none;
+	transition: 0.6s;
+
+}
+header .menu {
+	position: relative;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	transition: 0.6s;
+	font-size: 2em;
+	text-shadow: 0 0 8px white;
+}
+ header .bag {
+	position: relative;
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	transition: 0.6s;
+	font-size: 2em;
+	text-shadow: 0 0 8px white;
+}
+
+header .menu:hover, header .bag:hover, header .logo-navbar:hover {
+	cursor: pointer;
+	transform: scale(1.2);
+}
+
+
+
+/* menu */
+
+.menu-overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-y: hidden;
+  transition: 0.5s;
+	text-decoration: none;
+  text-transform: uppercase;
+}
+
+.menu-overlay-content {
+  position: relative;
+  top: 20%;
+overflow: hidden;
+  text-align: center;
+  margin-top: 30px;
+    
+}
+
+.menu-overlay a {
+	font-family: Comfortaa;
+	font-weight: 500;
+	padding: 8px;
+	text-decoration: none;
+	font-size: 2em;
+	color: black;
+	display: block;
+	transition: 0.3s;
+}
+
+ 
+.menu-overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  color: black;
+  font-size: 60px;
+}
+
+.menu-overlay .closebtn:hover {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #e2a363;
+}
+
+.menu {
+	color: black;
+}
+
+/* underline of menu-items */
+.un {
+  display: inline-block;
+  padding-bottom:3px;
+  background-image: linear-gradient(#e2a363, #e2a363);
+  background-position: 0 100%; /*OR bottom left*/
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  transition:
+    background-size 0.3s,
+    background-position 0s 0.3s; /*change after the size immediately*/
+}
+
+.un:hover {
+  background-position: 100% 100%; /*OR bottom right*/
+  background-size: 100% 3px;
+}
+
+/* active menu-item */
+.active {
+	background-size: 100% 3px;
+	color: black;
+}
+
+/* section part */
+
+
+.banner {
+position:relative;
+  background-image: url("../images/services.jpg");
+  height: 50vh; 
+  background-attachment: fixed;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+}
+
+.title {
+	
+	position: absolute;
+        top: 52%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+		color: white;
+}
+
+.title-text {
+	text-shadow: 8px 8px 8px black;
+	text-decoration: underline solid #e2a363;
+	text-underline-offset: 0.2em;
+}
+
+
+/* Our Services and Our Products*/
+.services {
+	margin: 2.5% 0;
+}
+
+.services h1 {
+	color: #871C0E;
+}
+
+.services h1:hover {
+	color: black;
+}
+
+.services h1, .services h5{
+	display: flex;
+	font-family: 'Playfair Display', serif;
+	justify-content: center;
+}
+
+.services .row {
+	padding: 28px 11%;
+	width: 99vw;
+}
+
+.sq-img {
+	height: 260px;
+	width: 260px;
+	overflow: hidden;
+	border: 2px solid #e2a363;
+	border-radius: 5%;
+	
+}
+
+.sq-img:hover {
+	background-color: RGBA(247,163,99,0.41);
+	border: 2.5px solid white;
+	cursor: pointer;
+}
+	
+.sq-img img{
+	width: 100%;
+	height: 100%;
+}
+		
+.sq-img-text {
+	text-align: center;
+	margin: 30px 0 ;
+}
+
+services .image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Printing */ 
+.printing, .binding, .laminating, .cutting {
+	margin: 2.5% 0;
+}
+
+#printing, #binding, #cutting, #laminating {
+	display: none;
+}
+.services h1, .printing h1, .binding h1, .laminating h1, .cutting h1 {
+	color: #871C0E;
+}
+
+.services h1:hover {
+	color: black;
+}
+
+.servs h1, .servs h5{
+	display: flex;
+	font-family: 'Playfair Display', serif;
+	justify-content: center;
+}
+
+.printing .row, .binding .row, .laminating .row, .cutting .row {
+	margin: 4% 10%;
+}
+
+.paper {
+	filter: drop-shadow(0 0 0.1rem black);
+}
+.item-img {
+	height: 300px;
+	width: 300px;
+	overflow: hidden;
+	border: 2px solid #e2a363;
+	border-radius: 5%;
+}
+
+.item-img:hover{
+	background-color: RGBA(247,163,99,0.41);
+	border: 2.5px solid RGBA(247,163,99,0.41);
+	cursor: pointer;
+	
+}
+
+.item-img img{
+	width: 100%;
+	height: 100%;
+}
+
+.item-text {
+	margin-top: 3%;
+}
+
+
+.shadow {
+	box
+}
+
+/*FLIP*/
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+ 
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+	border-radius: 5%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+.flip-card-back {
+  background-color: RGBA(247,163,99,0.41);
+  color: black;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back p {
+	 text-align: center;
+	 margin: 0 10%;
+	 padding: 15% 0;
+}
+
+/*	PARALLAX */
+.parallax {
+  background-image: url("../images/footer-top-bg.jpg");
+  height: 250px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 40px;
+
+ 
+}
+
+/* Footer */
+
+footer {
+	margin-bottom: 0px;
+	width: 100%;
+	--bs-gutter-x: 1.5rem;
+}
+
+footer .logo-footer {
+ width: 75%;
+ margin-bottom: 20px;
+ margin-top: -10px;
+}
+
+footer .row {
+padding: 60px 10%;
+width: 99vw;
+background: url("../images/footer-bg.jpg");
+
+}
+
+footer .links {
+	padding-left: 5%;
+}
+
+.footer-c {
+background: #e2a363;
+padding: 15px 8%;
+color: white;
+
+}
+
+.social-icons {
+	float: right;
+	margin-top: -10px;
+}
+
+.social-icons .fab {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: white;
+    background: transparent;
+	margin-left: 10px;
+    cursor: pointer;
+}
+
+.social-icons .fab:hover {
+	color: white;
+	border: 2px solid white;
+	background: transparent;
+	text-align: center;
+}
+
+footer .btn {
+	background-color: #e2a363;
+	color: white;
+	transition: 0.5s;
+	margin-left:  20px;
+}
+
+footer .btn:hover {
+	cursor: pointer;
+	transform: scale(1.2);
+	color: white;
+}
+
+
+#printing:target {
+    display: block;
+}
+
+#binding:target {
+    display: block;
+}
+
+#laminating:target {
+    display: block;
+}
+
+#cutting:target {
+    display: block;
+	
+}

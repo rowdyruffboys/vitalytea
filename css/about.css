@@ -1,0 +1,372 @@
+body
+{
+	background: white;
+	min-height: 200vh;
+	font-family: 'Comfortaa';
+	color: black;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	Left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.6s;
+	padding: 30px 100px;
+	z-index: 100000;
+}
+
+header.sticky {
+	padding: 4px 100px;
+	background: #e2a363; /*#C19F7AFF;*/
+}
+
+header.sticky .logo-navbar img {
+	filter: brightness(0) invert(1);
+	height: 4em;
+}
+
+header.sticky .bi-list, header.sticky .bi-bag {
+	color: white;
+	font-size: 1.6em;
+	text-shadow: none;
+}
+
+header .logo-navbar img {
+	position: relative;
+	height: 5.2em;
+	text-decoration: none;
+	transition: 0.6s;
+		filter: brightness(0) invert(1);
+}
+
+header .menu, header .bag {
+	position: relative;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	transition: 0.6s;
+	font-size: 2em;
+	text-shadow: 0 0 8px white;
+}
+
+header .menu:hover, header .bag:hover, header .logo-navbar:hover {
+	cursor: pointer;
+	transform: scale(1.2);
+}
+
+
+
+/* menu */
+
+.menu-overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-y: hidden;
+  transition: 0.5s;
+	text-decoration: none;
+  text-transform: uppercase;
+}
+
+.menu-overlay-content {
+  position: relative;
+  top: 20%;
+overflow: hidden;
+  text-align: center;
+  margin-top: 30px;
+    
+}
+
+.menu-overlay a {
+	font-family: Comfortaa;
+	font-weight: 500;
+	padding: 8px;
+	text-decoration: none;
+	font-size: 2em;
+	color: black;
+	display: block;
+	transition: 0.3s;
+}
+
+ 
+.menu-overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  color: black;
+  font-size: 60px;
+}
+
+.menu-overlay .closebtn:hover {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #e2a363;
+}
+
+.menu {
+	color: black;
+}
+
+
+/* Opening ni Ward */
+
+.img-fluid{
+	max-width: 30%; 
+	height: auto; 
+	margin-top:6%;
+	position: relative;
+	left:65%;
+}
+
+
+
+
+.container{
+	margin-top: -28%;
+}
+.ktwn{
+	position: relative;
+}
+
+.pix{
+	width: 280px;
+	height: 280px;
+	margin-top:8%;
+	margin-left:12%;
+}
+
+.abv{
+	margin-top:-1%;
+		margin-left:0%;
+}
+.abv1{
+		margin-top:1%;
+			margin-left:0%;
+}
+.abt-us{
+	margin-top:10%;
+	margin-left:0%;
+}
+
+
+.info{
+	margin-top:12%;
+	margin-left:5%;
+}
+
+.desc{
+	margin-top: 3%;
+	top: -1%;
+	margin-left:5%;
+}
+.desc1{
+	margin-top: -3%;
+	margin-left:5%;
+}
+
+.bi-facebook
+{
+	top: 30px;
+	margin-left:5%;
+}
+
+.bi-instagram
+{
+	top: 30px;
+	margin-left:5%;
+}
+
+.bi-spotify
+{
+	top: 30px;
+	margin-left:5%;
+}
+
+.bel{
+	margin-top:12%;
+	margin-left:0%;
+	text-align: center;
+	cursor: default;
+	position: relative;
+}
+.bem{
+	margin-top:12%;
+	margin-left:0%;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+}
+
+.bel1 {
+	text-align: center;
+		color: #e2a363;	
+}
+.bel1 a{
+	margin-top:1%;
+	margin-left:0%;
+	text-align: center;
+	
+	text-decoration: none;
+	color: #e2a363;	
+}
+
+.bel1 a:hover {
+	cursor: pointer;
+	color: #871C0E;
+}
+
+/* Closing ni Ward*/
+
+
+
+/* underline of menu-items */
+.un {
+  display: inline-block;
+  padding-bottom:3px;
+  background-image: linear-gradient(#e2a363, #e2a363);
+  background-position: 0 100%; 
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  transition:
+    background-size 0.3s,
+    background-position 0s 0.3s;
+
+}
+
+.un:hover {
+  background-position: 100% 100%;
+  background-size: 100% 3px;
+}
+
+/* active menu-item */
+.active {
+	background-size: 100% 3px;
+	color: black;
+}
+
+
+/* section part */
+
+
+.banner {
+position:relative;
+  background-image: url("../images/about.jpg");
+  height: 50vh; 
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 160%;
+
+}
+
+
+.title {
+	
+	position: absolute;
+        top: 52%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+		color: white;
+}
+
+.title-text {
+	text-shadow: 8px 8px 8px black;
+	text-decoration: underline solid #e2a363;
+	text-underline-offset: 0.2em;
+}
+
+/*	PARALLAX */
+.parallax {
+  background-image: url("../images/footer-top-bg.jpg");
+  height: 250px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 40px;
+
+ 
+}
+
+/* Footer */
+
+footer {
+	margin-bottom: 0px;
+	width: 100%;
+	--bs-gutter-x: 1.5rem;
+}
+
+footer .logo-footer {
+ width: 75%;
+ margin-bottom: 20px;
+ margin-top: -10px;
+}
+
+footer .row {
+padding: 60px 10%;
+width: 99vw;
+background: url("../images/footer-bg.jpg");
+
+}
+
+footer .links {
+	padding-left: 5%;
+}
+
+.footer-c {
+background: #e2a363;
+padding: 15px 8%;
+color: white;
+
+}
+
+.social-icons {
+	float: right;
+	margin-top: -10px;
+}
+
+.social-icons .fab {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: white;
+    background: transparent;
+	margin-left: 10px;
+    cursor: pointer;
+}
+
+.social-icons .fab:hover {
+	color: white;
+	border: 2px solid white;
+	background: transparent;
+	text-align: center;
+}
+
+footer .btn {
+	background-color: #e2a363;
+	color: white;
+	transition: 0.5s;
+	margin-left:  20px;
+}
+
+footer .btn:hover {
+	cursor: pointer;
+	transform: scale(1.2);
+	color: white;
+}
+
+
